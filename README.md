@@ -1,13 +1,8 @@
----
-title: "README"
-author: "Lauren Kraus"
-date: "Friday, April 24, 2015"
-output: html_document
----
+#**README**
 
 The purpose of this analysis is to use the smartphone dataset "Human Activity Recognition Using Smartphones Dataset, Version 1.0" by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, and Luca Oneto, take the mean and standard deviation estimates of accelerometer and gyroscope sensor signals they collected and create a tidy data set by combining the test and training data sets.  Then, another tidy set is created that gives the average of each variable for each activity and each subject.
 
-##**The Data**
+##The Data
 
 This analysis uses the "Human Activity Recognition Using Smartphones Dataset, Version 1.0" data set by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, and Luca Oneto.  Their experiment involved a group of 30 volunteers within the ages of 19 and 48.  Each person performed six different activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying) waeing a Samsung Galaxy S II smartphone on their waist.  They then captured 3-axial linear acceleration and 3-axial angular velocity at a contant rate of 50Hz using the phone's embedded accelerometer and gyroscope.
 
@@ -118,7 +113,7 @@ mean.std.data <- cbind(complete.data[,1], complete.data[,564],
                        complete.data[,(542+2):(543+2)])
 ```
 
-**5) Create Final Tidy Data Set
+**5) Create Final Tidy Data Set**
 
 The last step is to create a final, independent tidy data set that gives the average of each variable for each activity and each subject.  To do this `group_by` and `summarize` from the *dplyr* package are used.  This step creates a tidy data set, following the basic rules for tidy data:
 

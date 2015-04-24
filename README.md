@@ -98,7 +98,7 @@ colnames(complete.data)[3 + 2] <- "tBodyAcc.mean.Z"
 
 **4) Extract Measurements on the Mean and Standard Deviation for each Measurement**
 
-Next a smaller data set is created by extracting only the measurements on the mean and standard deviation for each measurement.  This data set is created using `cbind()` as follows:
+Next a smaller data set is created by extracting only the measurements on the mean and standard deviation for each measurement.  The resulting smaller data set will be 10,2999 rows by 68 columns.  This data set is created using `cbind()` as follows:
 
 ```{r}
 mean.std.data <- cbind(complete.data[,1], complete.data[,564],
@@ -122,7 +122,7 @@ The last step is to create a final, independent tidy data set that gives the ave
     2. Each measured variable is in a separate column
     3. Each different observation of a variable is in a different row
 
-This final tidy data set is created using the following code:
+This final tidy data set will by 180 rows by 68 columns, and is created using the following code:
 
 ```{r}
 ## Lastly, create a tidy data set with the average of each variable for each activity and each subject
